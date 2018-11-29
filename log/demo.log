@@ -1,0 +1,8 @@
+2018-11-26 19:58:15,895 ERROR (UserServiceImpl.java:24)- 测试error级别日志
+2018-11-26 19:58:15,895 WARN (UserServiceImpl.java:25)- 测试warn级别日志
+2018-11-26 19:58:15,895 INFO (UserServiceImpl.java:26)- 测试info级别日志
+2018-11-26 19:58:15,896 DEBUG (UserServiceImpl.java:27)- 测试debug级别日志
+2018-11-26 21:29:01,478 ERROR (UserServiceImpl.java:23)- 测试error级别日志
+2018-11-26 21:29:01,479 WARN (UserServiceImpl.java:24)- 测试warn级别日志
+2018-11-26 21:29:01,479 INFO (UserServiceImpl.java:25)- 测试info级别日志
+2018-11-26 21:29:01,479 DEBUG (UserServiceImpl.java:26)- 测试debug级别日志

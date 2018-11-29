@@ -19,7 +19,7 @@ public class UserController {
     public String insertUser(User user){
         logger.info("+++++++++++++++++++++++++++++++");
         logger.info(user.toString());
-        //iUserService.insertUser(user);
+        iUserService.insertUser(user);
         return "index";
     }
 }

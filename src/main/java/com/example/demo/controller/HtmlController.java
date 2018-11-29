@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HtmlController {
     @RequestMapping(value = "/hello")
     public String hello(Model model) {
-        String name = "jiangbei";
+        String name = "Spring Boot";
         model.addAttribute("name", name);
         return "index";
     }

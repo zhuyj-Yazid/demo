@@ -15,12 +15,11 @@ public class UserController {
     private IUserService iUserService;
 
     private final static Logger logger = LoggerFactory.getLogger(UserController.class);
-    @RequestMapping("/insert")
-    public void insertUser(User user){
-        user.setAge(23);
-        user.setName("张三");
-        user.setSex("1");
-        iUserService.insertUser(user);
-        logger.info("cehsi");
+    @RequestMapping("/add")
+    public String insertUser(User user){
+        logger.info("+++++++++++++++++++++++++++++++");
+        logger.info(user.toString());
+        //iUserService.insertUser(user);
+        return "index";
     }
 }

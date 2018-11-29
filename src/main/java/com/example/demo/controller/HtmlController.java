@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.entity.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,5 +12,11 @@ public class HtmlController {
         String name = "Spring Boot";
         model.addAttribute("name", name);
         return "index";
+    }
+
+    @RequestMapping(value = "/insert")
+    public String insert(Model model) {
+        model.addAttribute("user", new User());
+        return "insert";
     }
 }

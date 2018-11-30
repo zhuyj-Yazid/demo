@@ -8,9 +8,6 @@
     <result column="age" jdbcType="INTEGER" property="age" />
   </resultMap>
   <insert id="insert" parameterType="com.example.demo.entity.User">
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
-      SELECT LAST_INSERT_ID()
-    </selectKey>
     insert into user (`name`, sex, age)
     values (#{name,jdbcType=VARCHAR}, #{sex,jdbcType=CHAR}, #{age,jdbcType=INTEGER})
   </insert>

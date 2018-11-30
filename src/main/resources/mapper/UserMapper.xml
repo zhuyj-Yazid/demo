@@ -15,4 +15,8 @@
     select id, `name`, sex, age
     from user
   </select>
+
+  <delete id="delete" parameterType="int">
+    delete from user where id = #{id}
+  </delete>
 </mapper>

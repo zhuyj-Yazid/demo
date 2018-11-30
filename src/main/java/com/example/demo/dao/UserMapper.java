@@ -12,4 +12,8 @@ import java.util.List;
 public interface UserMapper {
     //@Insert("INSERT INTO USER ( name, sex, age ) VALUES ( #{name}, #{sex}, #{age} )")
     void insert(User record);
+
+    List<User> selectAll();
+
+    void delete(int id);
 }

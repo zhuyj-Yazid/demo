@@ -2,8 +2,14 @@ package com.example.demo.service;
 
 import com.example.demo.entity.User;
 
+import java.util.List;
+
 public interface IUserService{
 
-    public void insertUser(User user);
+    void insertUser(User user);
+
+    List<User> selectAll();
+
+    void delete(int id);
 
 }

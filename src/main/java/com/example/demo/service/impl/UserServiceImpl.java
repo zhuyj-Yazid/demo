@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements IUserService {
 
@@ -19,11 +21,19 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public void insertUser(User user) {
-        userMapper.insert(user);//FATAL > ERROR > WARN > INFO > DEBUG > TRACE  -->
-        logger.error("测试error级别日志");
-        logger.warn("测试warn级别日志");
-        logger.info("测试info级别日志");
-        logger.debug("测试debug级别日志");
-        logger.trace("测试trace级别日志");
+        logger.info("insert:"+ user.toString());
+        userMapper.insert(user);
+    }
+
+    @Override
+    public List<User> selectAll() {
+        List<User> userList = userMapper.selectAll();
+        logger.info("selectAll:"+ userList.size());
+        return userList;
+    }
+
+    @Override
+    public void delete(int id) {
+        userMapper.delete(id);
     }
 }

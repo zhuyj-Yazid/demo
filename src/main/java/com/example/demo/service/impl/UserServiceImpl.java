@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.thymeleaf.util.StringUtils;
 
 import java.util.List;
 
@@ -29,6 +30,13 @@ public class UserServiceImpl implements IUserService {
     public List<User> selectAll() {
         List<User> userList = userMapper.selectAll();
         logger.info("selectAll:"+ userList.size());
+        for (User user : userList) {
+            if(!StringUtils.isEmptyOrWhitespace(user.getSex()) && StringUtils.equalsIgnoreCase("0",user.getSex())){
+                user.setSex("男");
+            }else{
+                user.setSex("女");
+            }
+        }
         return userList;
     }
 
